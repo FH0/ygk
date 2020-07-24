@@ -23,7 +23,8 @@
     "address": "10.5.5.1", // 填IP，仅支持ipv4，默认从服务器获取
     "netmask": "255.255.255.0", // address不为空时默认值: 255.255.255.0
     "mtu": "1500", // 默认值: 1500
-    "path": "/dev/net/tun" // 默认值: /dev/net/tun
+    "path": "/dev/net/tun", // 默认值: /dev/net/tun
+    "tun_post": "" // 操作tun网卡后执行的shell命令，无默认值
   },
   "server": { // 表示客户端，当此项存在时listen失效
     "address": "1.2.3.4", // 填IP或者域名，仅支持ipv4，无默认值且为必填项
@@ -32,12 +33,14 @@
     "ch": "", // custom header，默认值: GET / HTTP/1.1\r\nHost: biadu.com\r\n\r\n
     "timeout": 300 // 超时后断开连接，单位：秒，默认值: 300
   },
-  "listen": { // 表示服务端
-    "address": "0.0.0.0", //  填IP仅支持ipv4，默认值: 0.0.0.0
-    "port": 80, // 无默认值且为必填项
-    "password": "abcdef", // 无默认值且为必填项
-    "timeout": 60 // 超时后发送心跳包，单位：秒，默认值: 60
-  }
+  "listen": [ // 表示服务端，可以配置多个
+    {
+      "address": "0.0.0.0", //  填IP仅支持ipv4，默认值: 0.0.0.0
+      "port": 80, // 无默认值且为必填项
+      "password": "abcdef", // 无默认值且为必填项
+      "timeout": 60 // 超时后发送心跳包，单位：秒，默认值: 30
+    }
+  ]
 }
 ```
 
