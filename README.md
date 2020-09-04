@@ -16,7 +16,8 @@
     "gid": 1000, // 切换运行用户组，需要 root 权限，无默认值
     "pid_file": "/home/ygk/ygk.pid", // 指定 pid 输出文件，无默认值
     "log_level": "fatal", // 日志级别，具体看下方介绍，默认 fatal
-    "log_file": "/home/ygk/ygk.log" // 日志输出文件，默认标准输出（stdout）
+    "log_file": "/home/ygk/ygk.log", // 日志输出文件，默认标准输出（stdout）
+    "log_file_max": 1024 // 日志文件大小的最大值，超出后会清空日志文件，单位 kb，默认 1024
   },
   "in": { // 客户端的入口设置
     "mode": "tun", // 入口模式，支持 tun，无默认值且为必填项
@@ -49,7 +50,8 @@
     "gid": 1000, // 切换运行用户组，需要 root 权限，无默认值
     "pid_file": "/home/ygk/ygk.pid", // 指定 pid 输出文件，无默认值
     "log_level": "fatal", // 日志级别，具体看下方介绍，默认 fatal
-    "log_file": "/home/ygk/ygk.log" // 日志输出文件，默认标准输出（stdout）
+    "log_file": "/home/ygk/ygk.log", // 日志输出文件，默认标准输出（stdout）
+    "log_file_max": 1024 // 日志文件大小的最大值，超出后会清空日志文件，单位 kb，默认 1024
   },
   "tun": { // 服务端 tun 选项
     "name": "tun3", // 虚拟网卡名称，默认 tun3
