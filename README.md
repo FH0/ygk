@@ -33,7 +33,7 @@
     "password": "abc", // 服务端密码，无默认值且为必填项
     "ch": "GET / HTTP/1.1\r\nHost: qq.com\r\n\r\n", // custom header，自定义的 http 请求头部，无默认值且为必填项
     "tun_address": "", // 客户端的地址，必须处于服务端的子网内，默认从服务端获取
-    "timeout": 30 // 连接超时时间，默认 30 秒
+    "timeout": 10 // 连接超时时间，最大 4294967，默认 10 秒
   }
 }
 ```
@@ -67,7 +67,7 @@
       "port": 11, // 监听端口，无默认值且为必填项
       "password": "abc", // 密码
       "ch": "HTTP/1.1 200 OK\r\n\r\n", //  custom header，自定义的 http 应答头部，默认 HTTP/1.1 200 OK\r\n\r\n
-      "timeout": 60 // 连接超时，默认 60 秒
+      "timeout": 60 // 连接超时，最大 4294967，默认 60 秒
     },
     {
       "address": "0.0.0.0",
