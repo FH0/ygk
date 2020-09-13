@@ -23,7 +23,7 @@
     "mode": "tun", // 入口模式，支持 tun，无默认值且为必填项
     "name": "tun3", // tun 模式的虚拟网卡名称，默认 tun3
     "netmask": "255.255.255.0", // tun 模式的子网掩码，默认 255.255.255.0
-    "mtu": 1500, // tun 模式的 mtu 值，默认 1500
+    "mtu": 1400, // tun 模式的 mtu 值，默认 1400
     "path": "/dev/net/tun", // tun 模式的 tun 路径，默认 /dev/net/tun 或 /dev/tun
     "tun_post": "echo hello world" // tun 模式的网卡变化后执行的 shell 命令，无默认值
   },
@@ -33,7 +33,7 @@
     "password": "abc", // 服务端密码，无默认值且为必填项
     "ch": "GET / HTTP/1.1\r\nHost: qq.com\r\n\r\n", // custom header，自定义的 http 请求头部，无默认值且为必填项
     "tun_address": "", // 客户端的地址，必须处于服务端的子网内，默认从服务端获取
-    "timeout": 10 // 连接超时时间，最大 4294967，默认 10 秒
+    "timeout": 10000 // 连接超时时间，最大 4294967296，默认 10000 毫秒
   }
 }
 ```
@@ -57,7 +57,7 @@
     "name": "tun3", // 虚拟网卡名称，默认 tun3
     "address": "10.5.5.1", // 虚拟网卡地址，默认 10.5.5.1
     "netmask": "255.255.255.0", // 子网掩码，默认 255.255.255.0
-    "mtu": 1500, // mtu 值，默认 1500
+    "mtu": 1400, // mtu 值，默认 1400
     "path": "/dev/net/tun", //  tun 路径，默认 /dev/net/tun 或 /dev/tun
     "tun_post": "echo hello world" // 网卡变化后执行的 shell 命令，无默认值
   },
@@ -67,14 +67,14 @@
       "port": 11, // 监听端口，无默认值且为必填项
       "password": "abc", // 密码
       "ch": "HTTP/1.1 200 OK\r\n\r\n", //  custom header，自定义的 http 应答头部，默认 HTTP/1.1 200 OK\r\n\r\n
-      "timeout": 60 // 连接超时，最大 4294967，默认 60 秒
+      "timeout": 10000 // 连接超时时间，最大 4294967296，默认 10000 毫秒
     },
     {
       "address": "0.0.0.0",
       "port": 12,
       "password": "abc",
       "ch": "HTTP/1.1 200 OK\r\n\r\n",
-      "timeout": 60
+      "timeout": 10000
     }
   ]
 }
