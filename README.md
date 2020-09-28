@@ -23,7 +23,7 @@
     "mode": "tun", // 入口模式，支持 tun，无默认值且为必填项
     "name": "tun3", // tun 模式的虚拟网卡名称，默认 tun3
     "netmask": "255.255.255.0", // tun 模式的子网掩码，默认 255.255.255.0
-    "mtu": 1400, // tun 模式的 mtu 值，默认 1400
+    "mtu": 2800, // tun 模式的 mtu 值，默认 2800
     "path": "/dev/net/tun", // tun 模式的 tun 路径，默认 /dev/net/tun 或 /dev/tun
     "tun_post": "echo hello world" // tun 模式的网卡变化后执行的 shell 命令，无默认值
   },
@@ -57,7 +57,7 @@
     "name": "tun3", // 虚拟网卡名称，默认 tun3
     "address": "10.5.5.1", // 虚拟网卡地址，默认 10.5.5.1
     "netmask": "255.255.255.0", // 子网掩码，默认 255.255.255.0
-    "mtu": 1400, // mtu 值，默认 1400
+    "mtu": 2800, // mtu 值，默认 2800
     "path": "/dev/net/tun", //  tun 路径，默认 /dev/net/tun 或 /dev/tun
     "tun_post": "echo hello world" // 网卡变化后执行的 shell 命令，无默认值
   },
